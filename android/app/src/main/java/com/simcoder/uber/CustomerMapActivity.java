@@ -206,7 +206,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
             @Override
             public void onPlaceSelected(Place place) {
-                // TODO: Get info about the selected place.
+                // TODO: Get information about the selected place.
                 destination = place.getName().toString();
                 destinationLatLng = place.getLatLng();
             }
@@ -504,8 +504,8 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
 
                     LatLng latLng = new LatLng(location.getLatitude(),location.getLongitude());
 
-                    //mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                    //mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
                     if(!getDriversAroundStarted)
                         getDriversAround();
                 }
